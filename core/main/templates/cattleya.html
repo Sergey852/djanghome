@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<a href="{% url 'home'%}"><button>Home</button></a>
+<a href="{% url 'dendrobium'%}"><button>Dendrobium</button></a>
+
+<hr>
+<br>
+
+    {% for i in mylist %}
+        <img src="{{ i.img.url }}" width="1000px"alt="">
+        <h2>{{ i.name }}</h2>
+        <p>{{ i.about }}</p>
+    {% endfor %}
+
+
+{% endblock %}

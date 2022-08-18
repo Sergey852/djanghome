@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{% url 'home'%}"><button>Home</button></a>
+<a href="{% url 'cattleya'%}"><button>Cattleya</button></a>
+
+<hr>
+<br>
+
+    {% for j in dendr %}
+        <img src="{{ j.img.url }}" width="700px"alt="">
+        <h2>{{ j.name }}</h2>
+        <p>{{ j.about }}</p>
+    {% endfor %}
+
+{% endblock %}
